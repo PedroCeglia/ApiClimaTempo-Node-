@@ -9,7 +9,7 @@ var path = require('path');
 const timezoneServices = require('./Timezone/index.js');
 
 // Porta de Saida
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(session({secret: 'shauidxfvyuigfuifvyuifyiuuiaxvsaxsauisavasui'}));
 app.use(express.json());
