@@ -11,13 +11,13 @@ const timezoneServices = require('./Timezone/index.js');
 // Porta de Saida
 const port = process.env.PORT || 5000;
 
+app.use(cors({origin:'https://clima-tempo-ceglia.herokuapp.com', methods:['GET']}));
 app.use(session({secret: 'shauidxfvyuigfuifvyuifyiuuiaxvsaxsauisavasui'}));
 app.use(express.json());
 app.use(fileupload({
     useTempFiles: true,
     tempFileDir: path.join(__dirname, 'temp')
 }));
-app.use(cors({origin:'https://clima-tempo-ceglia.herokuapp.com', methods:['GET']}));
 // Inicializando Servidor Node
 app.listen(port,()=>{
     console.log('Rodando na porta 5000...');
