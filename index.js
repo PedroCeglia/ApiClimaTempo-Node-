@@ -17,7 +17,7 @@ app.use(fileupload({
     useTempFiles: true,
     tempFileDir: path.join(__dirname, 'temp')
 }));
-app.use(cors({origin:'https://clima-tempo-api.herokuapp.com/'}));
+app.use(cors());
 // Inicializando Servidor Node
 app.listen(port,()=>{
     console.log('Rodando na porta 5000...');
