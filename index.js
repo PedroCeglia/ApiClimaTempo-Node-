@@ -11,7 +11,7 @@ const timezoneServices = require('./Timezone/index.js');
 // Porta de Saida
 const port = process.env.PORT || 5000;
 
-app.use(cors({ methods:['GET']}));
+app.use(cors({origin:'http://localhost:3000/' ,methods:['GET']}));
 app.use(session({secret: 'shauidxfvyuigfuifvyuifyiuuiaxvsaxsauisavasui'}));
 app.use(express.json());
 app.use(fileupload({
