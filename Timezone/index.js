@@ -23,7 +23,7 @@ const timezoneService = {
             const dataLocal = timezone
             // Recuperar Dia & Mês e passar para int
             const dia = parseInt(dataLocal.getDate())
-            const mes = parseInt(dataLocal.getMonth())
+            const mes = parseInt(dataLocal.getMonth()+1)
             // Verificar a quantidade de caracteres e passar para String
             const diaStr = (dia>=10)?dia.toString():"0"+ dia.toString()
             const mesStr = (mes>=10)?mes.toString():"0" + mes.toString()
